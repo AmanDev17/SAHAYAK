@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Scanned Documents</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('jay.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        .upload-section {
+            margin-bottom: 20px;
+        }
+        .upload-section label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .upload-section input[type="file"] {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .button-container {
+            text-align: right;
+            margin-top: 20px;
+        }
+        .button-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .button-container .back-button {
+            background-color: #f44336;
+        }
+        .button-container .continue-button {
+            background-color: #4CAF50;
+        }
+        .button-container .back-button:hover {
+            background-color: #c62828;
+        }
+        .button-container .continue-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Upload Scanned Documents</h1>
+
+        <!-- Marksheet of Class 10 -->
+        <div class="upload-section">
+            <label for="class10Marksheet">Marksheet of Class 10 (PDF format):</label>
+            <input type="file" id="class10Marksheet" accept=".pdf">
+        </div>
+
+        <!-- Marksheet of Class 12 -->
+        <div class="upload-section">
+            <label for="class12Marksheet">Marksheet of Class 12 (PDF format):</label>
+            <input type="file" id="class12Marksheet" accept=".pdf">
+        </div>
+
+        <!-- Marksheet of Last Passed College Examination/Diploma -->
+        <div class="upload-section">
+            <label for="collegeMarksheet">Marksheet of Last Passed College Examination/Diploma (PDF format):</label>
+            <input type="file" id="collegeMarksheet" accept=".pdf">
+        </div>
+
+        <!-- Domicile Certificate -->
+        <div class="upload-section">
+            <label for="domicileCertificate">Domicile Certificate (PDF format):</label>
+            <input type="file" id="domicileCertificate" accept=".pdf">
+        </div>
+
+        <!-- Scanned Copy of Bank Passbook -->
+        <div class="upload-section">
+            <label for="bankPassbook">Scanned Copy of Bank Passbook (1st page containing account no, name, and IFSC code) (PDF format):</label>
+            <input type="file" id="bankPassbook" accept=".pdf">
+        </div>
+
+        <!-- Income Certificate -->
+        <div class="upload-section">
+            <label for="incomeCertificate">Income Certificate of Family (PDF format):</label>
+            <input type="file" id="incomeCertificate" accept=".pdf">
+        </div>
+
+        <!-- Save and Continue Button -->
+        <div class="button-container">
+            <button class="back-button" type="button" onclick="window.history.back();">Back</button>
+            <button class="continue-button" type="button" onclick="window.location.href='file:///C:/Users/grdja/OneDrive/Desktop/Html/pmsss/photosign.html';">Save and Continue</button>
+        </div>
+    </div>
+
+</body>
+</html>

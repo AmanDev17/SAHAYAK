@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Study Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('jay.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 500px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .input-group select,
+        .input-group input[type="date"],
+        .input-group input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .button-group input[type="button"],
+        .button-group input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .button-group input[type="button"] {
+            background-color: #f44336;
+            color: white;
+        }
+        .button-group input[type="button"]:hover {
+            background-color: #d32f2f;
+        }
+        .button-group input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .button-group input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Present Course Study</h1>
+        <form action="file:///C:/Users/grdja/OneDrive/Desktop/Html/pmsss/document.html" method="POST">
+            <div class="input-group">
+                <label for="state">Select State:</label>
+                <select id="state" name="state" required>
+                    <option value="">Select State</option>
+                    <option value="andhra_pradesh">Andhra Pradesh</option>
+                    <option value="arunachal_pradesh">Arunachal Pradesh</option>
+                    <option value="assam">Assam</option>
+                    <option value="bihar">Bihar</option>
+                    <option value="chhattisgarh">Chhattisgarh</option>
+                    <option value="goa">Goa</option>
+                    <option value="gujarat">Gujarat</option>
+                    <option value="haryana">Haryana</option>
+                    <option value="himachal_pradesh">Himachal Pradesh</option>
+                    <option value="jharkhand">Jharkhand</option>
+                    <option value="karnataka">Karnataka</option>
+                    <option value="kerala">Kerala</option>
+                    <option value="madhya_pradesh">Madhya Pradesh</option>
+                    <option value="maharashtra">Maharashtra</option>
+                    <option value="manipur">Manipur</option>
+                    <option value="meghalaya">Meghalaya</option>
+                    <option value="mizoram">Mizoram</option>
+                    <option value="nagaland">Nagaland</option>
+                    <option value="odisha">Odisha</option>
+                    <option value="punjab">Punjab</option>
+                    <option value="rajasthan">Rajasthan</option>
+                    <option value="sikkim">Sikkim</option>
+                    <option value="tamil_nadu">Tamil Nadu</option>
+                    <option value="telangana">Telangana</option>
+                    <option value="tripura">Tripura</option>
+                    <option value="uttar_pradesh">Uttar Pradesh</option>
+                    <option value="uttarakhand">Uttarakhand</option>
+                    <option value="west_bengal">West Bengal</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="District">Select District:</label>
+                <input type="text" id="District" name="District" placeholder="Enter District name" required>
+            </div>
+            <div class="input-group">
+                <label for="course">Present Course:</label>
+                <select id="course" name="course" required>
+                    <option value="">Select Course</option>
+                    <option value="bachelor_of_science">Bachelor of Science</option>
+                    <option value="bachelor_of_arts">Bachelor of Arts</option>
+                    <option value="bachelor_of_commerce">Bachelor of Commerce</option>
+                    <option value="master_of_science">Master of Science</option>
+                    <option value="master_of_arts">Master of Arts</option>
+                    <option value="master_of_commerce">Master of Commerce</option>
+                    <option value="bachelor_of_technology">Bachelor of Technology</option>
+                    <option value="master_of_business">Master of Business</option>
+                    <option value="bachelor_of_computer">Bachelor of Computer Application</option>
+                    <option value="master_of_computer">Master of Commerce</option>
+                    <option value="bachelor_of_fashion">Bachelor of Fashion</option>
+                    <option value="master_of_technology">Master of Technology</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="discipline">Discipline of Course:</label>
+                <input type="text" id="discipline" name="discipline" placeholder="Enter course discipline" required>
+            </div>
+            <div class="input-group">
+                <label for="duration">Duration of Course:</label>
+                <input type="text" id="duration" name="duration" placeholder="Enter duration" required>
+            </div>
+            <div class="input-group">
+                <label for="admission_date">Date of Admission:</label>
+                <input type="date" id="admission_date" name="admission_date" required>
+            </div>
+            <div class="button-group">
+                <input type="button" value="Back" onclick="window.location.href='index.html'">
+                <input type="submit" value="Next">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

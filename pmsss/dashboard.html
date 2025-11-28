@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Minister Scholarship Scheme</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color:#FFEAD9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            width: 100%;
+            background-color: maroon;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            position: relative;
+        }
+        .header img {
+            height: 60px; /* Adjusted size for better visibility */
+            margin-left: 60px;
+        }
+        .header h1 {
+            flex: 1;
+            text-align:center;
+            margin: 0;
+            font-size: 24px; /* Adjusted font size for better alignment */
+        }
+        .buttons {
+            position: absolute;
+            right: 20px;
+        }
+        .buttons button {
+            background-color: #ffffff;
+            border: 1px solid #007bff;
+            color: #007bff;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .buttons button:hover {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+        .container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        .dashboard {
+            width: 30%;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+        .main-content {
+            width: 70%;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .animated-text {
+            opacity: 0;
+            animation: fadeIn 3s forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .footer-buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .footer-buttons button {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .footer-buttons button:hover {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+        .info-section h3 {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <!-- Adjusted image size -->
+        <img src="C:\Users\grdja\OneDrive\Desktop\Html\pmsss\AICTE-Logo-Vector.svg-.png" width="80" height="80" alt="AICTE Logo">
+        <h1>WELCOME TO PRIME MINISTER SCHOLARSHIP SCHEME</h1>
+        <div class="buttons">
+            <button onclick="toggleSection('Exit')">Log Out</button>
+            <button onclick="toggleSection('contact')">Contact</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="dashboard">
+            <h2><u>Dashboard</u></h2>
+            <p><a href="C:\Users\grdja\OneDrive\Desktop\Html\pmsss\academicc.html">Apply Scholarship</a></p>
+            <p><a href="track.html">Track Scholarship</a></p>
+	    <p><a href="Apply.html">How to Apply</a></p>
+        </div>
+        <div class="main-content">
+            <div class="animated-text">
+                <!-- Adjusted image size for better alignment -->
+                <h2><img src="Designer (1).png" width="800" height="400" alt="Scholarship Designer"></h2>
+            </div>
+            <div class="info-section">
+                <h3><u>Eligibility Criteria</u></h3>
+                <p>To be eligible for the Prime Minister Scholarship Scheme, applicants must meet the following criteria:</p>
+                <ul>
+                    <li>Must be a citizen of India.</li>
+                    <li>Must have secured admission in a recognized college or university.</li>
+                    <li>Must have achieved a minimum percentage in the qualifying examination.</li>
+                </ul>
+                
+                <h3><u>Benefits</u></h3>
+                <p>Selected candidates will receive:</p>
+                <ul>
+                    <li>Financial support for tuition fees.</li>
+                    <li>Scholarship amount for books and study materials.</li>
+                    <li>Additional support for other academic expenses.</li>
+                </ul>
+
+                <h3><u>Application Process</u></h3>
+                <p>To apply for the scholarship, follow these steps:</p>
+                <ol>
+                    <li>Fill out the online application form.</li>
+                    <li>Submit the required documents.</li>
+                    <li>Attend the interview process (if applicable).</li>
+                </ol>
+
+                <h3><u>Important Dates</u></h3>
+                <p>Keep track of the following deadlines:</p>
+                <ul>
+                    <li>Application Deadline: [Insert Date]</li>
+                    <li>Interview Dates: [Insert Dates]</li>
+                    <li>Results Announcement: [Insert Date]</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-buttons">
+        <button onclick="toggleSection('about')">About the Scholarship</button>
+        <button onclick="toggleSection('support')">Support</button>
+    </div>
+
+    <script>
+        function toggleSection(sectionId) {
+            alert('Section ' + sectionId + ' opened.');
+        }
+    </script>
+
+</body>
+</html>
+hyperlink the apply scholarship button with this address "C:\Users\grdja\OneDrive\Desktop\Html\pmsss\3rd page.html"

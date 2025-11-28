@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review and Submit Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('jay.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        .review-section {
+            margin-bottom: 20px;
+        }
+        .review-section label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .review-section p {
+            margin: 0;
+            padding: 5px 0;
+        }
+        .button-container {
+            text-align: right;
+            margin-top: 20px;
+        }
+        .button-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .button-container .back-button {
+            background-color: #f44336;
+        }
+        .button-container .submit-button {
+            background-color: #4CAF50;
+        }
+        .button-container .back-button:hover {
+            background-color: #c62828;
+        }
+        .button-container .submit-button:hover {
+            background-color: #45a049;
+        }
+        .confirmation-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #4CAF50;
+        }
+        .confirmation-message a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Review and Submit Application</h1>
+
+        <!-- Review Section -->
+        <div class="review-section">
+            <label for="name">Name:</label>
+            <p id="name">Jay Kumar Vishwakarma</p>
+        </div>
+
+        <div class="review-section">
+            <label for="email">Email:</label>
+            <p id="email">grdjay02@gmail.com</p>
+        </div>
+
+        <div class="review-section">
+            <label for="applicationId">Application ID:</label>
+            <p id="applicationId">123456</p>
+        </div>
+
+        <!-- Add other review sections as needed -->
+
+        <!-- Button Container -->
+        <div class="button-container">
+            <button class="back-button" type="button" onclick="window.history.back();">Back</button>
+            <button class="submit-button" type="button" onclick="submitApplication()">Save and Submit</button>
+        </div>
+
+        <!-- Confirmation Message -->
+        <div id="confirmationMessage" class="confirmation-message">
+            Application submitted successfully! <a href="path/to/application.pdf" download>Download your application</a>
+        </div>
+    </div>
+
+    <script>
+        function submitApplication() {
+            // Simulate the application submission process
+            document.getElementById('confirmationMessage').style.display = 'block';
+
+            // Redirect to the dashboard page after 3 seconds
+            setTimeout(function() {
+                window.location.href = 'file:///C:/Users/grdja/OneDrive/Desktop/Html/pmsss/dashboard.html';
+            }, 3000); // Adjust the timeout as needed
+        }
+    </script>
+
+</body>
+</html>

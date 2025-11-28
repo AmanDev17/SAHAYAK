@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Status</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('jay.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 500px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .status-section {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        .status-section label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #555;
+        }
+        .status-section .status-button {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #fafafa;
+            cursor: pointer;
+        }
+        .status-section .status-button:hover {
+            background-color: #f0f0f0;
+        }
+        .status-section .status-button .status-indicator {
+            margin-left: auto;
+            font-size: 20px;
+            color: green;
+            display: none;
+        }
+        .status-section .status-button.done .status-indicator {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Track Your Application Status</h1>
+        <div class="status-section">
+            <label for="upload">Track with Document:</label>
+            <div class="status-button" id="upload-status">
+                <span>Upload Document</span>
+                <span class="status-indicator">&#10003;</span>
+            </div>
+        </div>
+        <div class="status-section">
+            <label for="document-verification">Document Verification:</label>
+            <div class="status-button" id="document-verification-status">
+                <span>Document Verification</span>
+                <span class="status-indicator">&#10003;</span>
+            </div>
+        </div>
+        <div class="status-section">
+            <label for="finance-department">Went to Finance Department:</label>
+            <div class="status-button" id="finance-department-status">
+                <span>Finance Department</span>
+                <span class="status-indicator">&#10003;</span>
+            </div>
+        </div>
+        <div class="status-section">
+            <label for="congratulation">Congratulations:</label>
+            <div class="status-button" id="congratulation-status">
+                <span>Congratulations</span>
+                <span class="status-indicator">&#10003;</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

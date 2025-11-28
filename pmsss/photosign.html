@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Photo and Signature</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('jay.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        .upload-section {
+            margin-bottom: 20px;
+        }
+        .upload-section label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .upload-section input[type="file"] {
+            margin-bottom: 10px;
+        }
+        .upload-section img {
+            max-width: 200px;
+            max-height: 200px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .verification-text {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #4CAF50;
+        }
+        .button-container {
+            text-align: right;
+            margin-top: 20px;
+        }
+        .button-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .button-container .back-button {
+            background-color: #f44336;
+        }
+        .button-container .continue-button {
+            background-color: #4CAF50;
+        }
+        .button-container .back-button:hover {
+            background-color: #c62828;
+        }
+        .button-container .continue-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Upload Photo Section -->
+        <div class="upload-section">
+            <label for="photoUpload">Upload Photo (50KB max, JPG/JPEG format):</label>
+            <input type="file" id="photoUpload" accept=".jpg, .jpeg" onchange="displayPhoto(event)">
+            <img id="photoDisplay" src="" alt="Uploaded Photo" style="display: none;">
+            <div id="verificationText" class="verification-text"></div>
+        </div>
+
+        <!-- Upload Signature Section -->
+        <div class="upload-section">
+            <label for="signatureUpload">Upload Signature (20KB max, JPG/JPEG format):</label>
+            <input type="file" id="signatureUpload" accept=".jpg, .jpeg">
+        </div>
+
+        <!-- Save and Continue Button -->
+        <div class="button-container">
+            <button class="back-button" type="button" onclick="window.history.back();">Back</button>
+            <button class="continue-button" type="button" onclick="window.location.href='file:///C:/Users/grdja/OneDrive/Desktop/Html/pmsss/review.html';">Save and Continue</button>
+        </div>
+    </div>
+
+    <script>
+        function displayPhoto(event) {
+            const file = event.target.files[0];
+            const photoDisplay = document.getElementById('photoDisplay');
+            const verificationText = document.getElementById('verificationText');
+
+            if (file) {
+                const fileSizeKB = file.size / 1024;
+                const fileType = file.type;
+
+                if (fileSizeKB <= 50 && (fileType === 'image/jpeg' || fileType === 'image/jpg')) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        photoDisplay.src = e.target.result;
+                        photoDisplay.style.display = 'block';
+                        verificationText.textContent = 'I am a human';
+                    }
+                    reader.readAsDataURL(file);
+                } else {
+                    alert('Please upload a JPG/JPEG photo of size 50KB or less.');
+                    photoDisplay.style.display = 'none';
+                    verificationText.textContent = '';
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
